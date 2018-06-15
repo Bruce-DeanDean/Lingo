@@ -1,0 +1,136 @@
+#mainbox{
+    margin: 20px;
+    align-content: center;
+    background-color: #c2000b;
+
+    
+    
+}
+#dropdown-button{
+    float: left;
+    margin: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 5px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 10px 0 rgba(0, 0, 0, 0.10); */
+}
+
+#Output-button{
+    
+    float: right;
+    margin: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 10px 0 rgba(0, 0, 0, 0.10); */ 
+}
+
+a{
+    color: black;
+}
+#translatebutton{
+    float: right;
+    
+    margin: 10px;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, rgb(255, 217, 0) , yellow);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); */
+
+
+
+}
+
+#clearbutton{
+    color:black;
+    float: right;
+    
+    width: 75px;
+    height: 55px;
+    margin-right: 10px;
+    
+    margin-top: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to bottom right, rgb(233, 233, 233) , rgb(197, 197, 197));
+
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15); */
+
+
+}
+#playbutton{
+    
+    /* margin-top: 5px; */
+    float: left;
+    /* margin-right: 10px; */
+    border-radius: 15px;
+    margin:10px;
+    border: #00a308;
+    width: 200px;
+    background: linear-gradient(to bottom right, rgb(20, 231, 13) , rgb(0, 156, 26));
+
+}
+
+#toText{
+    margin: 10px;
+}
+
+#box{
+    background-color: #252525;
+    margin: auto;
+    padding: 10px;
+    border-radius: 15px;
+    height: 325px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#box2{
+    background-color: #252525;
+    
+    margin-top: 20px;
+    padding: 10px;
+    height: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.card{
+    margin: 10px;
+    height: 150px;
+    border-radius: 10px;
+}
+.textarea{
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 10px 0 rgba(0, 0, 0, 0.10);
+
+}
+
+body{
+    font-family:'Ubuntu', sans-serif;
+    background-color: #c2000b;
+}
+
+
+
+
+h2{
+    color: white;
+}
+
+
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-top: 2px;
+    margin-bottom: 4px;
+
+}
+
+
+
+
