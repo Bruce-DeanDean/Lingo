@@ -19,8 +19,9 @@
   },
   "homepage": "https://github.com/Bruce-DeanDean/WelcomMat#readme",
   "dependencies": {
+    "@google-cloud/text-to-speech": "^0.1.0",
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "google-translate-api": "^2.3.0",
-    "socket.io": "^2.1.1"
+    "google-translate-api": "^2.3.0"
   }
 }
