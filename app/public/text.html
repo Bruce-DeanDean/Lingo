@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,141 +15,128 @@
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 
-    <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-
-
-
-
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+</head>
 
 <body>
     <div class="container is-fluid" id="mainbox">
-            <div class="columns">
-                    <div class="column is-three-fifths">
-                    
+        <div class="columns">
+            <div class="column is-three-fifths">
+
                 <div class="box" id="box">
-                        <img src="lingologo.png" alt="Lingo" style="width:86.028px;height:71.798px;" id="lingo">
+                    <img src="lingologo.png" alt="Lingo" style="width:86.028px;height:71.798px;" id="lingo">
                     <!-- <h1><b>Lingo</b></h1> -->
                     <!-- Input Text Box -->
-                    <textarea class="textarea" placeholder="Input the desired text here"></textarea id="textbox">
-                        <!-- Language Dropdown Menu -->
-                        <div class="dropdown" id="dropdown">
-                                <div class="dropdown-trigger">
-                                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" id="dropdown-button">
-                                    <span id= "languagearea">Language</span>
-                                    <span class="icon is-small">
-                                      <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                  </button>
-                                </div>
-                                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                                    <div class="dropdown-content" id="dropdownContent">
-                                                <a href="#" class="dropdown-item" id="english">
-                                                  English
-                                                </a>
-                                                <a href="#" class="dropdown-item" id="french">
-                                                  French
-                                                </a>
-                                                <a href="#" class="dropdown-item" id="spanish">
-                                                  Spanish
-                                                </a>
-                                                <a href="#" class="dropdown-item" id="japanese">
-                                                  Japanese
-                                                </a>
-                                    </div>
-                                    
-                                  </div>
-                                 </div> 
+                    <textarea class="textarea" placeholder="Input the desired text here" id="txtSource"></textarea>
+                    <!-- Language Dropdown Menu -->
+                    <div class="dropdown" id="dropdown">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" id="dropdown-button">
+                                <span id="languagearea">Language</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <!-- Translate and Clear buttons -->
 
-                                 
+                        <a class="button is-normal" id="translatebutton">Translate </a>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content" id="dropdownContent">
+                                <a href="#" class="dropdown-item" id="english">
+                                    English
+                                </a>
+                                <a href="#" class="dropdown-item" id="french">
+                                    French
+                                </a>
+                                <a href="#" class="dropdown-item" id="spanish">
+                                    Spanish
+                                </a>
+                                <a href="#" class="dropdown-item" id="japanese">
+                                    Japanese
+                                </a>
+                            </div>
 
-                        
-                                  <!-- Translate and Clear buttons -->
-                                
-                                <a class="button is-normal" id="translatebutton">Translate </a>
-                                
-                                
-                              </div>
+                        </div>
+                    </div>
 
-                              <!-- Hidden Translated box -->
+                </div>
 
-            <div class="box" id="box2">
-             <div class="card">
-                 <div class="card-content">
-                    <p class="title"></p>
-                       <p class="subtitle"></p>
-                         </div>
-                                   
-                         </div>
-                            
-                         <div class="columns">
-                                <div class="column is-half">
-                                        <a class="button is-large" id="playbutton">Play</a>                                
-                                    
+                <!-- Hidden Translated box -->
+
+                <div class="box" id="box2">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title"></p>
+                            <p class="subtitle"></p>
+                        </div>
+
+                    </div>
+
+                    <div class="columns">
+                        <div class="column is-half">
+                            <a class="button is-large" id="playbutton">Play</a>
+
                             <div class="columns">
-                                    <div class="column is-half">
+                                <div class="column is-half">
 
-                                <a class="button is-normal" id="clearbutton">Clear</a> 
-                                </div> 
+                                    <a class="button is-normal" id="clearbutton">Clear</a>
+                                </div>
                             </div>
                         </div>
-                          
-                          
-
-
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-</body>                          
+</body>
 <script>
-$(document).ready(function(){
- $("#box2").hide();
+    $(document).ready(function () {
+        var dllSource;
+        $("#box2").hide();
 
-    var dropdownToggle = function(){
-        $("#dropdown-menu4").toggle()
-    }
-//Dropdown text replaces "Language" button
-    var dropdownSelect = function(){
-        var clickLang = $(this).text()
-        console.log(this)
-        $("#dropdown-menu4").toggle()
-        $("#languagearea").text(clickLang)
+        var dropdownToggle = function () {
+            $("#dropdown-menu4").toggle()
+        }
+        //Dropdown text replaces "Language" button
+        var dropdownSelect = function () {
+            var clickLang = $(this).text()
+            // console.log(this)
+            $("#dropdown-menu4").toggle()
+            $("#languagearea").text(clickLang)
 
-        console.log($(this).text())
-}
+            ddlSource = ($(this).text().trim())
+            // console.log(ddlSource)
+        }
 
-    $(".dropdown-item").click(dropdownSelect)
+        $(".dropdown-item").click(dropdownSelect)
 
-    $("#dropdown-button").click(dropdownToggle)
+        $("#dropdown-button").click(dropdownToggle)
 
+        $("#translatebutton").click(function () {
 
-})
+            $(".box").slideDown("slow");
+            $("#clearbutton").click(function () {
+                    $("#box2").slideUp("slow");
+                }
 
-    $("#translatebutton").click(function(){
-       $(".box").slideDown("slow");
-    $("#clearbutton").click(function(){
-        $("#box2").slideUp("slow");
-    }
-    
-    );
-})
+            );
 
+            var phrase = $('#txtSource').val();
+            var userInput = {
+                language: ddlSource,
+                phrase: phrase
+            }
+            console.log(userInput);
+            $.post("/api/phrase", userInput).then(function (data) {
+                console.log(typeof data);
+            });
+        })
 
-
+    })
 </script>
 
 
 </html>
-
-
-            
-                          
-
-
