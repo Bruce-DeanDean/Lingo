@@ -117,25 +117,14 @@ $(document).ready(function(){
 //Dropdown text replaces "Language" button
     var dropdownSelect = function(){
         var clickLang = $(this).text()
+        console.log(this)
         $("#dropdown-menu4").toggle()
         $("#languagearea").text(clickLang)
 
         console.log($(this).text())
 }
 
-//Output Language Dropdown Menu
-    var outputToggle= function(){
-        $("#OutdropContent").toggle()
-    }
-    var outputSelect = function(){
-        var textLang = $(this).text()
-        $("#OutdropContent").toggle()
-        $("#Outlanguagearea").toggle(textLang)
-
-        console.log($(this).text())
-    }
-
-    $("#dropdownContent").click(dropdownSelect)
+    $(".dropdown-item").click(dropdownSelect)
 
     $("#dropdown-button").click(dropdownToggle)
 
