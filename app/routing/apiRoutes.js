@@ -17,7 +17,12 @@ module.exports = function(app) {
       language = "ja-JP";
     } else if (language === "Spanish") {
       language = "es-ES";
+    } else if (language === "Italian") {
+      language = "it-IT";
+    } else if (language === "German") {
+      language = "de-DE";
     }
+
     var phrase = data.phrase;
 
     var resultPhrase = translate(phrase, { to: language.slice(0, 2) })
