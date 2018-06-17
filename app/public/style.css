@@ -3,8 +3,8 @@
     align-content: center;
     background-color: #c2000b;
 
-    
-    
+
+
 }
 #dropdown-button{
     float: left;
@@ -16,14 +16,14 @@
 }
 
 #Output-button{
-    
+
     float: right;
     margin: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
     border-radius: 10px;
-    
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 10px 0 rgba(0, 0, 0, 0.10); */ 
+
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.09), 0 6px 10px 0 rgba(0, 0, 0, 0.10); */
 }
 
 a{
@@ -31,7 +31,7 @@ a{
 }
 #translatebutton{
     float: right;
-    
+
     margin: 10px;
     float: left;
     margin-left: 5px;
@@ -47,11 +47,11 @@ a{
 #clearbutton{
     color:black;
     float: right;
-    
+
     width: 75px;
     height: 55px;
     margin-right: 10px;
-    
+
     margin-top: 10px;
     border-radius: 15px;
     background: linear-gradient(to bottom right, rgb(233, 233, 233) , rgb(197, 197, 197));
@@ -61,7 +61,7 @@ a{
 
 }
 #playbutton{
-    
+
     /* margin-top: 5px; */
     float: left;
     /* margin-right: 10px; */
@@ -87,7 +87,7 @@ a{
 }
 #box2{
     background-color: #252525;
-    
+
     margin-top: 20px;
     padding: 10px;
     height: 250px;
@@ -113,7 +113,10 @@ body{
 }
 
 
-
+.textarea {
+    font-family:'Ubuntu', sans-serif;
+    font-size: 1.25em;
+}
 
 h2{
     color: white;

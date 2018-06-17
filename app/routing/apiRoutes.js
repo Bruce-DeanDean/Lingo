@@ -26,21 +26,37 @@ module.exports = function(app) {
         // console.log(res.text);
 
         //=> text to speech
-        // textToSpeech(translatedPhrase, language);
+        textToSpeech(translatedPhrase, language);
         return translatedPhrase;
       })
       .catch(err => {
         console.error(err);
       });
 
-    // textToSpeech(phrase, language);
-
-    // res.sendFile('../output.mp3');
   resultPhrase.then(function(result) {
-     data.phrase = result;
-     res.json(data); // "Stuff worked!"
+     // data.phrase = result;
+     res.send(result); // "Stuff worked!"
     }, function(err) {
       console.log(err); // Error: "It broke"
     });
   });
+
+  // app.get('/voice', function(req,res){
+  //
+  //
+  //   var file = __dirname + './voice/' + output.mp3;
+  //   fs.exists(file,function(exists){
+  //     if(exists)
+  //     {
+  //       var rstream = fs.createReadStream(file);
+  //       rstream.pipe(res);
+  //     }
+  //     else
+  //     {
+  //       res.send("Its a 404");
+  //       res.end();
+  //     }
+  //
+  //   });
+  // });
 };

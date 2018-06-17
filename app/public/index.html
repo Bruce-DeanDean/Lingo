@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Lingo</title>
@@ -72,7 +73,7 @@
                 <div class="box" id="box2">
                     <div class="card">
                         <div class="card-content">
-                            <p class="title"></p>
+                            <p class="title">Translation</p>
                             <p class="subtitle"></p>
                         </div>
 
@@ -80,12 +81,17 @@
 
                     <div class="columns">
                         <div class="column is-half">
+                            <!--<audio controls>-->
+                                <!--<source src="output.mp3" type="audio/mpeg"> Your browser-->
+                                <!--does not-->
+                                <!--support the audio element.-->
+                            <!--</audio>-->
                             <a class="button is-large" id="playbutton">Play</a>
 
-                            <div class="columns">
+                            <div class="columns is-pulled-right">
                                 <div class="column is-half">
 
-                                    <a class="button is-normal" id="clearbutton">Clear</a>
+                                    <a class="button is-normal " id="clearbutton">Clear</a>
                                 </div>
                             </div>
                         </div>
@@ -96,7 +102,7 @@
 </body>
 <script>
     $(document).ready(function () {
-        var dllSource;
+        var ddlSource = "English";
         $("#box2").hide();
 
         var dropdownToggle = function () {
@@ -107,34 +113,55 @@
             var clickLang = $(this).text()
             // console.log(this)
             $("#dropdown-menu4").toggle()
-            $("#languagearea").text(clickLang)
-
-            ddlSource = ($(this).text().trim())
-            // console.log(ddlSource)
+            $("#languagearea").text(clickLang);
+            ddlSource = ($(this).text().trim());
+            console.log(ddlSource)
         }
 
         $(".dropdown-item").click(dropdownSelect)
 
         $("#dropdown-button").click(dropdownToggle)
 
-        $("#translatebutton").click(function () {
+        $("#translatebutton").click(function (e) {
 
-            $(".box").slideDown("slow");
-            $("#clearbutton").click(function () {
-                    $("#box2").slideUp("slow");
+            e.preventDefault();
+            var phrase = $('#txtSource').val();
+            if (phrase === '') {
+                alert('a text input is required')
+            } else {
+
+                var language = ddlSource;
+
+
+                var userInput = {
+                    language: language,
+                    phrase: phrase
                 }
 
-            );
+                console.log(userInput);
+                $.post("/api/phrase", userInput).then(function (data) {
+                    $(".subtitle").text(data);
+                    var audioElement = document.createElement('audio');
+                    audioElement.setAttribute('src', "output.mp3");
+                    audioElement.load();
+                    $("#playbutton").on("click", function() {
 
-            var phrase = $('#txtSource').val();
-            var userInput = {
-                language: ddlSource,
-                phrase: phrase
+                      audioElement.play();
+                    })
+                });
+                $(".box").slideDown("slow");
+                $("#clearbutton").click(function () {
+                        $("#box2").slideUp("slow");
+                    }
+
+                );
             }
-            console.log(userInput);
-            $.post("/api/phrase", userInput).then(function (data) {
-                console.log(data);
-            });
+
+
+
+
+
+
         })
 
     })

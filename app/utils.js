@@ -1,4 +1,5 @@
-var fs = require('fs');
+const fs = require('fs');
+const path = require('path');
 // Imports the Google Cloud client library
 var textToSpeech = require('@google-cloud/text-to-speech');
 
@@ -34,7 +35,8 @@ module.exports = function textToSpeech(phrase, language) {
     }
 
     // Write the binary audio content to a local file
-    fs.writeFile('output.mp3', response.audioContent, 'binary', err => {
+    var filePath = path.join(__dirname, "/public/output.mp3")
+    fs.writeFile(filePath, response.audioContent, 'binary', err => {
       if (err) {
         console.error('ERROR:', err);
         return;
