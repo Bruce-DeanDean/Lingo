@@ -2,6 +2,7 @@ var fs = require('fs');
 var path = require('path');
 // Imports the Google Cloud client library
 var textToSpeech = require('@google-cloud/text-to-speech');
+var uuid = require('uuidv4');
 
 // Creates a client
 var client = new textToSpeech.TextToSpeechClient({
@@ -10,6 +11,7 @@ var client = new textToSpeech.TextToSpeechClient({
 
 
 module.exports = function textToSpeech(phrase, language) {
+  var uniqueId = uuid().slice(-12);
 // Construct the request
   const request = {
     input: {
@@ -35,7 +37,7 @@ module.exports = function textToSpeech(phrase, language) {
     }
 
     // Write the binary audio content to a local file
-    var filePath = path.join(__dirname, "/public/output.mp3")
+    var filePath = path.join(__dirname, `/public/audio/${uniqueId}.mp3`)
     fs.writeFile(filePath, response.audioContent, 'binary', err => {
       if (err) {
         console.error('ERROR:', err);
@@ -44,4 +46,5 @@ module.exports = function textToSpeech(phrase, language) {
       console.log('Audio content written to file: output.mp3');
     });
   });
+  return uniqueId;
 }
