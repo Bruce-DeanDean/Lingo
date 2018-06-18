@@ -1,5 +1,5 @@
 {
-  "name": "WelcomMat",
+  "name": "Lingo",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -24,7 +24,6 @@
     "empty-folder": "^2.0.2",
     "express": "^4.16.3",
     "google-translate-api": "^2.3.0",
-    "google-tts-api": "0.0.2",
     "uuidv4": "^1.0.1"
   }
 }

@@ -1,10 +1,7 @@
 var textToSpeech = require("../utils");
-const translate = require("google-translate-api");
+var translate = require("google-translate-api");
 
 module.exports = function(app) {
-  // app.get("/api/phrase", function(req, res) {
-  //   res.json({ name: "Stanley" });
-  // });
 
   app.post("/api/phrase", function(req, res) {
     var data = req.body;
@@ -46,23 +43,4 @@ module.exports = function(app) {
       console.log(err); // Error: "It broke"
     });
   });
-
-  // app.get('/voice', function(req,res){
-  //
-  //
-  //   var file = __dirname + './voice/' + output.mp3;
-  //   fs.exists(file,function(exists){
-  //     if(exists)
-  //     {
-  //       var rstream = fs.createReadStream(file);
-  //       rstream.pipe(res);
-  //     }
-  //     else
-  //     {
-  //       res.send("Its a 404");
-  //       res.end();
-  //     }
-  //
-  //   });
-  // });
 };
