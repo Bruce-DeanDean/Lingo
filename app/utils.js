@@ -2,6 +2,7 @@ var fs = require('fs');
 var path = require('path');
 // Imports the Google Cloud client library
 var textToSpeech = require('@google-cloud/text-to-speech');
+var empty = require('empty-folder');
 var uuid = require('uuidv4');
 
 // Creates a client
@@ -12,7 +13,15 @@ var client = new textToSpeech.TextToSpeechClient({
 
 module.exports = function textToSpeech(phrase, language) {
   var uniqueId = uuid().slice(-12);
-// Construct the request
+
+  // empty the audio folder
+  var pathToEmpty = path.join(__dirname, `/public/audio/`)
+  empty(pathToEmpty, false, (o) => {
+    if (o.error) console.error(err);
+    // console.log(o.removed);
+    // console.log(o.failed);
+  });
+  // Construct the request
   const request = {
     input: {
       text: phrase,

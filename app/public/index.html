@@ -153,14 +153,6 @@
                 $.post("/api/phrase", userInput).then(function (data) {
                   console.log(data);
 
-                  var audioDump=document.getElementById("audioDump")
-                  var audioEle = document.getElementById("audioEle")
-                  if (audioEle){
-                    console.log("this exists")
-                    audioDump.removeChild(audioEle)
-
-                  }
-
                   $(".subtitle").text(data.translatedPhrase);
 
                     audioElement = document.createElement('audio');
@@ -170,8 +162,6 @@
                     //
                     audioDump.appendChild(audioElement)
                     $(document).on("click","#playbutton", function() {
-                      console.log("---------")
-                      console.log(audioElement)
                       audioElement.load();
 
                       audioElement.play();
