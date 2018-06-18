@@ -1,12 +1,10 @@
-#mainbox{
+#mainbox {
     margin: 20px;
     /* align-content: center; */
     background-color: #c2000b;
-
-
-
 }
-#dropdown-button{
+
+#dropdown-button {
     float: left;
     margin: 10px;
     margin-bottom: 10px;
@@ -16,46 +14,35 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-
-a{
+a {
     color: black;
 }
-#translatebutton{
+
+#translatebutton {
     float: right;
-
     margin: 10px;
-
     margin-left: 5px;
     margin-bottom: 5px;
     border-radius: 10px;
-    border:yellow ;
-    background: linear-gradient(to bottom right, rgb(255, 208, 0) , rgb(255, 251, 0));
+    border: yellow;
+    background: linear-gradient(to bottom right, rgb(255, 208, 0), rgb(255, 251, 0));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-
-
 }
 
-#clearbutton{
-
-    color:black;
+#clearbutton {
+    color: black;
     float: right;
     position: absolute;
     /* width: 65px;
     height: 55px; */
     margin-right: 5px;
-
     margin-top: 10px;
     border-radius: 10px;
-    background: linear-gradient(to bottom right, rgb(233, 233, 233) , rgb(197, 197, 197));
-
+    background: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(197, 197, 197));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-
 }
-#playbutton{
 
+#playbutton {
     /* margin-top: 5px; */
     float: left;
     /* margin-right: 10px; */
@@ -63,27 +50,25 @@ a{
     margin-top: 10px;
     border: #00a308;
     width: 150px;
-    background: linear-gradient(bottom right, rgb(20, 231, 13) , rgb(0, 156, 26));
+    background: linear-gradient(bottom right, rgb(20, 231, 13), rgb(0, 156, 26));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-
 }
 
-#toText{
+#toText {
     margin: 10px;
 }
 
-#box{
+#box {
     background-color: #252525;
     margin: auto;
     padding: 10px;
     border-radius: 15px;
     height: 275px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     /* max-width: 70%; */
 }
-#box2{
+
+#box2 {
     background-color: #252525;
     /* text-align: center; */
     margin-top: 15px;
@@ -93,57 +78,43 @@ a{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* max-width: 70%; */
     margin: 0 auto;
-
 }
+
 /* #results{
     align-content: center;
     margin: 0 auto;
 } */
 
-.card{
+.card {
     margin: 0 auto;
-
     height: 170px;
-    max-width:90%;
+    max-width: 90%;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgb(87, 87, 87) inset;
     min-width: 100%
-
 }
-.textarea{
+
+.textarea {
     border-radius: 10px;
-    border:white;
+    border: white;
     font-size: 26px;
     box-shadow: 1px 1px 5px rgb(87, 87, 87) inset;
 }
 
-body{
-
-
+body {
     font-family: 'Asap', sans-serif;
-
     background-color: #c2000b;
 }
 
-
-
-
-h2{
+h2 {
     color: white;
 }
 
-
-
-img{
+img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
     margin-top: 1px;
     margin-bottom: 8px;
-
 }
-
-
-
-

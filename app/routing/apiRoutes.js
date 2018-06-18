@@ -2,7 +2,6 @@ var textToSpeech = require("../utils");
 var translate = require("google-translate-api");
 
 module.exports = function(app) {
-
   app.post("/api/phrase", function(req, res) {
     var data = req.body;
     var language = data.language;
@@ -22,25 +21,32 @@ module.exports = function(app) {
 
     var phrase = data.phrase;
 
-    var resultPhrase = translate(phrase, { to: language.slice(0, 2) })
+    var resultPhrase = translate(phrase, {
+      to: language.slice(0, 2)
+    })
       .then(res => {
         var translatedPhrase = res.text;
         // console.log(res.text);
 
         //=> text to speech
         var uniqueId = textToSpeech(translatedPhrase, language);
-        return {translatedPhrase, uniqueId};
+        return {
+          translatedPhrase,
+          uniqueId
+        };
       })
       .catch(err => {
         console.error(err);
       });
 
-  resultPhrase.then(function(result) {
-     // data.phrase = result;
-     res.send(result); // "Stuff worked!"
-    console.log(result);
-    }, function(err) {
-      console.log(err); // Error: "It broke"
-    });
+    resultPhrase.then(
+      function(result) {
+        res.send(result); // "Stuff worked!"
+        console.log(result);
+      },
+      function(err) {
+        console.log(err); // Error: "It broke"
+      }
+    );
   });
 };
