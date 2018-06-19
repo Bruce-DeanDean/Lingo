@@ -30,7 +30,7 @@
                     <img src="lingologo.png" alt="Lingo" style="width:86.028px;height:71.798px;" id="lingo">
                     <!-- <h1><b>Lingo</b></h1> -->
                     <!-- Input Text Box -->
-                    <textarea class="textarea" placeholder="Input the desired text here" id="txtSource"></textarea>
+                    <textarea class="textarea" placeholder="Input the desired text to start" id="txtSource"></textarea>
                     <!-- Language Dropdown Menu -->
                     <div class="dropdown" id="dropdown">
                         <div class="dropdown-trigger">
@@ -74,25 +74,27 @@
             </div>
         </div>
         <!-- Hidden Translated box -->
-        <div class="columns" id="results">
-            <div class="column is-three-fifths">
-                <div class="box" id="box2">
-                    <div class="card">
-                        <div class="card-content">
-                            <p class="title"></p>
-                            <p class="subtitle"></p>
+        <div class="container is is-fluid">
+            <div class="columns" id="results">
+                <div class="column is-three-fifths">
+                    <div class="box" id="box2">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title"></p>
+                                <p class="subtitle"></p>
+                            </div>
+
                         </div>
+                        <!-- Play and Clear buttons -->
+                        <div class="columns">
+                            <div class="column is-half">
+                                <a class="button is-normal" id="playbutton">Play</a>
 
-                    </div>
-                    <!-- Play and Clear buttons -->
-                    <div class="columns">
-                        <div class="column is-half">
-                            <a class="button is-normal" id="playbutton">Play</a>
+                                <div class="columns">
+                                    <div class="column">
 
-                            <div class="columns">
-                                <div class="column is-half">
-
-                                    <a class="button is-normal" id="clearbutton">Clear</a>
+                                        <a class="button is-normal" id="clearbutton">Clear</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -100,14 +102,17 @@
                 </div>
             </div>
         </div>
+
     </div>
-    <div id="audioDump"></div>
 </body>
 <script>
     $(document).ready(function () {
         var ddlSource = 'English';
         var audioElement;
         $('#box2').hide();
+        $('#translatebutton').hide();
+        $('#dropdown-button').hide();
+        $('.textarea').val('');
 
         var dropdownToggle = function () {
             $('#dropdown-menu4').toggle();
@@ -128,7 +133,7 @@
 
         //Make the translation button appear
         $(".textarea").on("input", function () {
-            $("#translatebutton").fadeIn();
+
             $("#dropdown-button").fadeIn();
             //Secondary box disappears if text is applied to the textbox
             $("#box2").slideUp("slow");

@@ -32,11 +32,10 @@ a {
 #clearbutton {
     color: black;
     float: right;
-    position: absolute;
     /* width: 65px;
     height: 55px; */
-    margin-right: 5px;
-    margin-top: 10px;
+    margin: 10px;
+    margin-bottom: 5px;
     border-radius: 10px;
     background: linear-gradient(to bottom right, rgb(233, 233, 233), rgb(197, 197, 197));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -45,6 +44,7 @@ a {
 #playbutton {
     /* margin-top: 5px; */
     float: left;
+    margin:10px;
     /* margin-right: 10px; */
     border-radius: 10px;
     margin-top: 10px;
