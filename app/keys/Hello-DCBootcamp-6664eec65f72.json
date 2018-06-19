@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hello-dcbootcamp",
+  "private_key_id": "6664eec65f724a8353c427bf5a29245378a0f90b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDXTXF90yzprRY2\nMjUp4QiKxl09Pj1WlxgrfqyaKlr5JD9kHF2FQhSQJ4xv63KvfACljc18KCQwPEU0\nHvCSJnDhUY0Ne8g3E8sCTd5zdHQtnxRj0DVSNQDuZY7wD5npmFAz4H0EB5ZkswWh\n9GrnhlTk8CFiHZOCNcStuLQQmf/zrj8gMG9/FpB1HfF9UeGHsXJv2ncYEXGKXgEK\nOttPUmYVUyZfDtaeqO+cNXSuUvHY6pS0Ml7vKUNh58Ju6P0WgXSfw1aViriBP86O\nWJeOe1BgvuQ6jH92Y2Nr9bpxGZ1DSsXtleT0IbxOSb5UMyE/EkzciHF1DH0A42y/\nyPhio0xtAgMBAAECggEADWFxwTkjnG42aC3cofqrVjyXxNueYkhHp0RbI8WoG73F\n9snQghymPINIthfy67cQLznN4H56KUlFn8SgfOTItSglVQYxXkLrpfwC7Df7lG5D\njSR+e9pxcV98b6z4isz9hwvXmS2DikSaAAO5tSPjGMtXt8pQxZHj5EwLXNDFWHaJ\nmaUuECsd07xW7mztdeJl34XeC7PpsWj/9knfSHn95zC7SioK7gCk1EMXFZpqcwGS\njCMNNSsooephcQMgRnBzcRy0pDkKeBv4XK2zz7XoO3FtE4xYwnj0pEuCxYU6PpUS\nDwqxNvmjJ5f673YD7UZbnXEspWl1itUTDs990ZMwYQKBgQD4Q+vFgFe4ZIfjE18S\n44EqPPk8U9gHlVbP4SWY/VwE1LjChna8GcMpjG5x2U9ERYBrgAdy/W7R9JkaWKby\n76JU22xw/nCctGNKJHr+baYA8y3dzXmCT1aQf+whnaVm45onjja3B6REZVWAQohT\nRZr62Ml7aeHtilx6Q70v7uPJlQKBgQDeAp9Q+TQAjSZzTr30fZsVm2uoqRMMeXqA\n9zAv4eDcPn0yMuSW9xC2euJEeEZcmEDE2I2kV0aOBTjS/aWUpOivadJrGCi1t7cX\nEk6z4K2XPzPYKv047+ITpREimQAzXmm+O19qKGX0B65A/tB98ce3WJxS1y4lWVMZ\ntkazE/WxeQKBgBAr9Ha4Bn7HZaagA2hqk2ZZ9G4+k+riinYeF2Hg1xaleKeLNL7J\n+tGBCUy3OBedY2EdRN7zrT1V7oct0Sov++YFKQovOMysX29b8vsRz2dub8Vr9gdL\n/bqJ6qrB5x1NpCQBeoTvpX6jDy+8pb6u4QqIBo/YdNQRWDbKpM8zg3kFAoGAI3bd\nxkyYvwHNQ5wvge/Sp0f1kbK4hUSeih1yiCOYDPa6fxtcIrWC6POGU5O3AbGcnxVM\nwxTiA2vYIPQ90BnrxaGs6EiqsCSRzdCx29AnSsLg4EY1vzOqtKKosxMn0gzh7W6E\nlmuvpaTYdC+AVK4bzjEMf7s59uNm//N7Jb4pgFkCgYEA1Y3Ct6cPXSQ6TvvsRAIy\nDyzlTUnRoQmqq37+TNE2UYomaZDevuUEQNy0YFpGYQnQB8C8+P14bUX5zkgcd6iN\nobABSUJqUmBDI56lDCD1ZkCr409IpSr8Chmeij6xKSiq6hf2SZyV9Lo8krZGE2Lu\n37HDysln9p4KpOX6QWMWGUQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "speech@hello-dcbootcamp.iam.gserviceaccount.com",
+  "client_id": "117116186034750983180",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speech%40hello-dcbootcamp.iam.gserviceaccount.com"
+}

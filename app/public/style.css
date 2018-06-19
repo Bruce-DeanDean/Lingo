@@ -50,7 +50,7 @@ a {
     margin-top: 10px;
     border: #00a308;
     width: 150px;
-    background: linear-gradient(bottom right, rgb(20, 231, 13), rgb(0, 156, 26));
+    background: linear-gradient(to bottom right, rgb(20, 231, 13), rgb(0, 156, 26));
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
